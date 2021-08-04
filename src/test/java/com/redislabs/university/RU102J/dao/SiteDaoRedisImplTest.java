@@ -97,7 +97,6 @@ public class SiteDaoRedisImplTest {
      * Challenge #1 Part 1. Use this test case to
      * implement the challenge in Chapter 1.
      */
-    @Ignore
     @Test
     public void findAllWithMultipleSites() {
         SiteDaoRedisImpl dao = new SiteDaoRedisImpl(jedisPool);
@@ -113,14 +112,12 @@ public class SiteDaoRedisImplTest {
      * Challenge #1 Part 2. Use this test case to
      * implement the challenge in Chapter 1.
      */
-    @Ignore
     @Test
     public void findAllWithEmptySites() {
         SiteDaoRedisImpl dao = new SiteDaoRedisImpl(jedisPool);
         assertThat(dao.findAll(), is(empty()));
     }
-
-    @Test
+    
     public void insert() {
         SiteDaoRedisImpl dao = new SiteDaoRedisImpl(jedisPool);
         Site site = new Site(4, 5.5, 4, "910 Pine St.",
